@@ -3,17 +3,17 @@ using OpenQA.Selenium.Chrome;
 
 namespace Selenium.Selectors
 {
-    public class NameSelector
+    public class IdSelector
     {
-        private const string NAME_SELECTOR_URL = "http://testing.todorvachev.com/selectors/name/";
-        private const string ELEMENT_NAME = "myName";
+        private const string ID_SELECTOR_URL = "http://testing.todorvachev.com/selectors/id/";
+        private const string IMG_ID = "testImage";
 
         public void Run()
         {
             var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(NAME_SELECTOR_URL);
+            driver.Navigate().GoToUrl(ID_SELECTOR_URL);
 
-            var element = driver.FindElement(By.Name(ELEMENT_NAME));
+            var element = driver.FindElement(By.Id(IMG_ID));
             System.Console.WriteLine(element.Displayed ? "element is visible" : "element is not visible");
 
             driver.Quit();
