@@ -6,8 +6,8 @@ namespace Selenium
     {
         private static void Main()
         {
-            var nameSelector = new NameSelector();
-            nameSelector.Run();
+            var selector = new ClassNameSelector();
+            selector.Run();
 
             System.Console.ReadKey();
         }
