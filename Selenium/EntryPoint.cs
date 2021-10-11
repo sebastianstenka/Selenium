@@ -1,5 +1,4 @@
-﻿using OpenQA.Selenium.Chrome;
-using System.Threading;
+﻿using Selenium.Selectors;
 
 namespace Selenium
 {
@@ -7,14 +6,10 @@ namespace Selenium
     {
         private static void Main()
         {
-            var driver = new ChromeDriver();
+            var nameSelector = new NameSelector();
+            nameSelector.Run();
 
-            driver.Navigate().GoToUrl("http://testing.todorvachev.com");
-
-            Thread.Sleep(3000);
-
-            driver.Quit();
+            System.Console.ReadKey();
         }
     }
 }
- 
