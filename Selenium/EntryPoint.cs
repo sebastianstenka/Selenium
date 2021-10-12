@@ -6,7 +6,7 @@ namespace Selenium
     {
         private static void Main()
         {
-            var selector = new ClassNameSelector();
+            var selector = new CssPathSelector();
             selector.Run();
 
             System.Console.ReadKey();

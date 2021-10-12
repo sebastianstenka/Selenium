@@ -55,8 +55,10 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selectors\ClassNameSelector.cs" />
+    <Compile Include="Selectors\CssPathSelector.cs" />
     <Compile Include="Selectors\IdSelector.cs" />
     <Compile Include="Selectors\NameSelector.cs" />
+    <Compile Include="Selectors\Selector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,22 +1,20 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace Selenium.Selectors
 {
     public class IdSelector
     {
-        private const string ID_SELECTOR_URL = "http://testing.todorvachev.com/selectors/id/";
-        private const string IMG_ID = "testImage";
+        private const string SUBPAGE_NAME = "id";
+        private const string ELEMENT_NAME = "testImage";
 
         public void Run()
         {
-            var driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(ID_SELECTOR_URL);
-
-            var element = driver.FindElement(By.Id(IMG_ID));
-            System.Console.WriteLine(element.Displayed ? "element is visible" : "element is not visible");
-
-            driver.Quit();
+            var element = Selector.GetElement(SUBPAGE_NAME, By.Id(ELEMENT_NAME));
+            if (element != null)
+            {
+                System.Console.WriteLine(element.Text);
+                Selector.Quit();
+            }
         }
     }
 }
