@@ -4,7 +4,7 @@ namespace Selenium.Selectors
 {
     public class ClassNameSelector
     {
-        private const string SUBPAGE_NAME = "class-name";
+        private const string SUBPAGE_NAME = "/selectors/class-name";
         private const string ELEMENT_NAME = "testClass";
 
         public void Run()

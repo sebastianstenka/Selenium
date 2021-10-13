@@ -7,7 +7,7 @@ namespace Selenium
     {
         private static void Main()
         {
-            var selector = new CheckBox();
+            var selector = new DropDown();
             selector.Run();
 
             System.Console.ReadKey();

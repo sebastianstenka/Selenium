@@ -4,7 +4,7 @@ namespace Selenium.Selectors
 {
     public class IdSelector
     {
-        private const string SUBPAGE_NAME = "id";
+        private const string SUBPAGE_NAME = "/selectors/id";
         private const string ELEMENT_NAME = "testImage";
 
         public void Run()

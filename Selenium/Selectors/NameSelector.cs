@@ -4,7 +4,7 @@ namespace Selenium.Selectors
 {
     public class NameSelector
     {
-        private const string SUBPAGE_NAME = "name";
+        private const string SUBPAGE_NAME = "/selectors/name";
         private const string ELEMENT_NAME = "myName";
 
         public void Run()

@@ -5,7 +5,7 @@ namespace Selenium.Selectors
 {
     public static class Selector
     {
-        private const string URL = "http://testing.todorvachev.com/selectors/";
+        private const string URL = "http://testing.todorvachev.com/";
         private static IWebDriver _driver;
 
         public static IWebElement GetElement(string subpageName, By type)

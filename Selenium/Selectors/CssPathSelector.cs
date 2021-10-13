@@ -4,7 +4,7 @@ namespace Selenium.Selectors
 {
     public class CssPathSelector
     {
-        private const string SUBPAGE_NAME = "css-path";
+        private const string SUBPAGE_NAME = "/selectors/css-path";
         private const string ELEMENT_NAME = "#post-108 > div > figure > img2";
 
         public void Run()

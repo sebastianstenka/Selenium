@@ -6,7 +6,7 @@ namespace Selenium.SpecialElements
 {
     public class RadioButton
     {
-        private const string SUBPAGE_NAME = "radio-button-test";
+        private const string SUBPAGE_NAME = "/special-elements/radio-button-test";
         private const string ELEMENT_NAME = "#post-10 > div > form > p:nth-child(6) > input[type=radio]:nth-child(1)";
 
         public void Run()

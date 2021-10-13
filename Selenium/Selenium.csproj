@@ -59,7 +59,10 @@
     <Compile Include="Selectors\IdSelector.cs" />
     <Compile Include="Selectors\NameSelector.cs" />
     <Compile Include="Selectors\Selector.cs" />
+    <Compile Include="SpecialElements\AlertBox.cs" />
     <Compile Include="SpecialElements\CheckBox.cs" />
+    <Compile Include="SpecialElements\DropDown.cs" />
+    <Compile Include="SpecialElements\RadioButton.cs" />
     <Compile Include="SpecialElements\TextInputField.cs" />
   </ItemGroup>
   <ItemGroup>

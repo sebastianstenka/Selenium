@@ -6,7 +6,7 @@ namespace Selenium.SpecialElements
 {
     public class CheckBox
     {
-        private const string SUBPAGE_NAME = "check-button-test-3";
+        private const string SUBPAGE_NAME = "/special-elements/check-button-test-3";
         private const string ELEMENT_NAME = "#post-33 > div > p:nth-child(8) > input[type=checkbox]:nth-child(";
 
         public void Run()

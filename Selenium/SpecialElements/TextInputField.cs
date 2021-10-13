@@ -6,7 +6,7 @@ namespace Selenium.SpecialElements
 {
     public class TextInputField
     {
-        private const string SUBPAGE_NAME = "text-input-field";
+        private const string SUBPAGE_NAME = "/special-elements/text-input-field";
         private const string ELEMENT_NAME = "username";
 
         public void Run()
