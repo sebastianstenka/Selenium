@@ -1,4 +1,5 @@
 ﻿using Selenium.Selectors;
+using Selenium.SpecialElements;
 
 namespace Selenium
 {
@@ -6,7 +7,7 @@ namespace Selenium
     {
         private static void Main()
         {
-            var selector = new CssPathSelector();
+            var selector = new CheckBox();
             selector.Run();
 
             System.Console.ReadKey();

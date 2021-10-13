@@ -59,6 +59,8 @@
     <Compile Include="Selectors\IdSelector.cs" />
     <Compile Include="Selectors\NameSelector.cs" />
     <Compile Include="Selectors\Selector.cs" />
+    <Compile Include="SpecialElements\CheckBox.cs" />
+    <Compile Include="SpecialElements\TextInputField.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
