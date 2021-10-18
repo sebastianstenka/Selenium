@@ -1,16 +1,17 @@
-﻿using Selenium.Selectors;
-using Selenium.SpecialElements;
+﻿using Selenium.AutoTestFramework;
 
 namespace Selenium
 {
     public class EntryPoint
     {
+        private const string URL = "http://testing.todorvachev.com/";
+
         private static void Main()
         {
-            var selector = new AlertBox();
-            selector.Run();
+            Driver.WebDriver.Navigate().GoToUrl(URL);
+            var menu = new Menu();
 
-            System.Console.ReadKey();
+            menu.About.Click();
         }
     }
 }
