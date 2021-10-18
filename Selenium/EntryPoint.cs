@@ -1,4 +1,4 @@
-﻿using Selenium.AutoTestFramework;
+﻿using System.Threading;
 
 namespace Selenium
 {
@@ -9,9 +9,8 @@ namespace Selenium
         private static void Main()
         {
             Driver.WebDriver.Navigate().GoToUrl(URL);
-            var menu = new Menu();
-
-            menu.About.Click();
+            NavigateTo.LoginFormThroughtTheMenu();
+            Thread.Sleep(3000);
         }
     }
 }

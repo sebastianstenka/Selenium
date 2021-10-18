@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Driver.cs" />
+    <Compile Include="NavigateTo.cs" />
     <Compile Include="UiElements\HomePage.cs" />
     <Compile Include="UiElements\Menu.cs" />
     <Compile Include="UiElements\RightSideBar.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="SpecialElements\DropDown.cs" />
     <Compile Include="SpecialElements\RadioButton.cs" />
     <Compile Include="SpecialElements\TextInputField.cs" />
+    <Compile Include="UiElements\TestSceneriosPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
