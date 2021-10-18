@@ -11,7 +11,7 @@ namespace Selenium.UiElements
         }
 
         [FindsBy(How = How.Name, Using = "userid")]
-        public IWebElement UserNameField { get; set; }
+        public IWebElement UsernameField { get; set; }
 
         [FindsBy(How = How.Name, Using = "passid")]
         public IWebElement PasswordField { get; set; }
