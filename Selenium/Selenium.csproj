@@ -65,6 +65,7 @@
     <Compile Include="NavigateTo.cs" />
     <Compile Include="Scenarios\LoginInvalidPassword.cs" />
     <Compile Include="Scenarios\LoginInvalidUsername.cs" />
+    <Compile Include="SpecialElements\Screenshot.cs" />
     <Compile Include="UiElements\HomePage.cs" />
     <Compile Include="UiElements\Menu.cs" />
     <Compile Include="UiElements\RightSideBar.cs" />
