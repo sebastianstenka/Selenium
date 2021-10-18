@@ -10,6 +10,7 @@ namespace Selenium
         {
             Driver.WebDriver.Navigate().GoToUrl(URL);
             NavigateTo.LoginFormThroughtTheMenu();
+            Actions.FillLoginForm(Config.Credentials.Valid.UserName, Config.Credentials.Valid.Password, Config.Credentials.Valid.RepeatPassword);
             Thread.Sleep(3000);
         }
     }
