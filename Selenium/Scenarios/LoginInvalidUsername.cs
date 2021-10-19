@@ -2,28 +2,30 @@
 
 namespace Selenium.Scenarios
 {
-    [TestFixture]
+    [Parallelizable]
     public class LoginInvalidUsername
     {
+        private OpenQA.Selenium.IWebDriver _driver;
+
         [OneTimeSetUp]
         public void SetUp()
         {
-            Actions.InitDriver();
-            NavigateTo.LoginFormThroughtTheMenu();
+            _driver = Actions.InitDriver();
+            NavigateTo.LoginFormThroughtTheMenu(_driver);
         }
 
         [OneTimeTearDown]
         public void CleanUp()
         {
-            Driver.WebDriver.Quit();
+            _driver.Quit();
         }
 
         [Test]
         public void LessThan5Characters()
         {
-            Actions.FillLoginForm(Config.Credentials.Invalid.Username.FourCharacter, Config.Credentials.Valid.Password, Config.Credentials.Valid.RepeatPassword);
+            Actions.FillLoginForm(_driver, Config.Credentials.Invalid.Username.FourCharacter, Config.Credentials.Valid.Password, Config.Credentials.Valid.RepeatPassword);
 
-            var alert = Driver.WebDriver.SwitchTo().Alert();
+            var alert = _driver.SwitchTo().Alert();
 
             Assert.AreEqual(Config.AlertMessages.UsernameLengthOutOfRange, alert.Text);
 
@@ -33,9 +35,9 @@ namespace Selenium.Scenarios
         [Test]
         public void MoreThan12Chars()
         {
-            Actions.FillLoginForm(Config.Credentials.Invalid.Username.ThirteenCharacter, Config.Credentials.Valid.Password, Config.Credentials.Valid.RepeatPassword);
+            Actions.FillLoginForm(_driver, Config.Credentials.Invalid.Username.ThirteenCharacter, Config.Credentials.Valid.Password, Config.Credentials.Valid.RepeatPassword);
 
-            var alert = Driver.WebDriver.SwitchTo().Alert();
+            var alert = _driver.SwitchTo().Alert();
 
             Assert.AreEqual(Config.AlertMessages.UsernameLengthOutOfRange, alert.Text);
 

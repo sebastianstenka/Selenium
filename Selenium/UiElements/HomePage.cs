@@ -6,9 +6,9 @@ namespace Selenium
 {
     public class HomePage
     {
-        public HomePage()
+        public HomePage(IWebDriver driver)
         {
-            PageFactory.InitElements(Driver.WebDriver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.Id, Using = "#page-17 > header > h1")]

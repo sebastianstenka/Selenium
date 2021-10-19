@@ -1,29 +1,32 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
 
 namespace Selenium.Scenarios
 {
-    [TestFixture]
+    [Parallelizable]
     public class LoginInvalidPassword
     {
+        private ChromeDriver _driver;
+
         [OneTimeSetUp]
         public void SetUp()
         {
-            Actions.InitDriver();
-            NavigateTo.LoginFormThroughtTheMenu();
+            _driver = Actions.InitDriver();
+            NavigateTo.LoginFormThroughtTheMenu(_driver);
         }
 
         [OneTimeTearDown]
         public void CleanUp()
         {
-            Driver.WebDriver.Quit();
+            _driver.Quit();
         }
 
         [Test]
         public void LessThan5Characters()
         {
-            Actions.FillLoginForm(Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.FourCharacter, Config.Credentials.Invalid.Password.FourCharacter);
+            Actions.FillLoginForm(_driver, Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.FourCharacter, Config.Credentials.Invalid.Password.FourCharacter);
 
-            var alert = Driver.WebDriver.SwitchTo().Alert();
+            var alert = _driver.SwitchTo().Alert();
 
             Assert.AreEqual(Config.AlertMessages.PasswordLenghtOutOfRange, alert.Text);
 
@@ -33,9 +36,9 @@ namespace Selenium.Scenarios
         [Test]
         public void MoreThan12Chars()
         {
-            Actions.FillLoginForm(Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.ThirteenCharacter, Config.Credentials.Invalid.Password.ThirteenCharacter);
+            Actions.FillLoginForm(_driver, Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.ThirteenCharacter, Config.Credentials.Invalid.Password.ThirteenCharacter);
 
-            var alert = Driver.WebDriver.SwitchTo().Alert();
+            var alert = _driver.SwitchTo().Alert();
 
             Assert.AreEqual(Config.AlertMessages.PasswordLenghtOutOfRange, alert.Text);
 

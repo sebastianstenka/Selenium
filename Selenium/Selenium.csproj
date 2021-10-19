@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Driver.cs" />
     <Compile Include="NavigateTo.cs" />
     <Compile Include="Scenarios\LoginInvalidPassword.cs" />
     <Compile Include="Scenarios\LoginInvalidUsername.cs" />
@@ -71,11 +70,6 @@
     <Compile Include="UiElements\RightSideBar.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selectors\ClassNameSelector.cs" />
-    <Compile Include="Selectors\CssPathSelector.cs" />
-    <Compile Include="Selectors\IdSelector.cs" />
-    <Compile Include="Selectors\NameSelector.cs" />
-    <Compile Include="Selectors\Selector.cs" />
     <Compile Include="SpecialElements\AlertBox.cs" />
     <Compile Include="SpecialElements\CheckBox.cs" />
     <Compile Include="SpecialElements\DropDown.cs" />

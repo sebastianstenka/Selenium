@@ -5,9 +5,9 @@ namespace Selenium
 {
     public class Menu
     {
-        public Menu()
+        public Menu(IWebDriver driver)
         {
-            PageFactory.InitElements(Driver.WebDriver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.Id, Using = "menu-item-25")]

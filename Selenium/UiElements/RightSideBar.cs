@@ -1,12 +1,13 @@
-﻿using SeleniumExtras.PageObjects;
+﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
 
 namespace Selenium
 {
     public class RightSideBar
     {
-        public RightSideBar()
+        public RightSideBar(IWebDriver driver)
         {
-            PageFactory.InitElements(Driver.WebDriver, this);
+            PageFactory.InitElements(driver, this);
         }
     }
 }
