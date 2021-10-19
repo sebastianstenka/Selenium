@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using Selenium.Selectors;
+using OpenQA.Selenium.Chrome;
 using System.Threading;
 
 namespace Selenium.SpecialElements
@@ -12,14 +12,19 @@ namespace Selenium.SpecialElements
         public void Run()
         {
             var option = "1";
-            var checkbox = Selector.GetElement(SUBPAGE_NAME, By.CssSelector(ELEMENT_NAME + option + ")"));
+
+            var driver = new ChromeDriver();
+            driver.Navigate().GoToUrl(Config.BaseUrl + SUBPAGE_NAME);
+
+            var checkbox = driver.FindElement(By.Name(ELEMENT_NAME + option + ")"));
             checkbox.Click();
             Thread.Sleep(3000);
 
             var isChecked = checkbox.GetAttribute("checked") == "true";
 
             Thread.Sleep(3000);
-            Selector.Quit();
+
+            driver.Quit();
         }
     }
 }

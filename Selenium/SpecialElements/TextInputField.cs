@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using Selenium.Selectors;
+using OpenQA.Selenium.Chrome;
 using System.Threading;
 
 namespace Selenium.SpecialElements
@@ -11,14 +11,19 @@ namespace Selenium.SpecialElements
 
         public void Run()
         {
-            var textBox = Selector.GetElement(SUBPAGE_NAME, By.Name(ELEMENT_NAME));
+            var driver = new ChromeDriver();
+            driver.Navigate().GoToUrl(Config.BaseUrl + SUBPAGE_NAME);
+
+            var textBox = driver.FindElement(By.Name(ELEMENT_NAME));
             textBox.SendKeys("Test text");
+
             Thread.Sleep(3000);
             System.Console.WriteLine(textBox.GetAttribute("value"));
             System.Console.WriteLine(textBox.GetAttribute("maxlength"));
             textBox.Clear();
             Thread.Sleep(3000);
-            Selector.Quit();
+
+            driver.Quit();
         }
     }
 }

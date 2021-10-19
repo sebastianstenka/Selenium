@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using Selenium.Selectors;
+using OpenQA.Selenium.Chrome;
 using System.Threading;
 
 namespace Selenium.SpecialElements
@@ -11,14 +11,18 @@ namespace Selenium.SpecialElements
 
         public void Run()
         {
-            var radioButton = Selector.GetElement(SUBPAGE_NAME, By.CssSelector(ELEMENT_NAME));
+            var driver = new ChromeDriver();
+            driver.Navigate().GoToUrl(Config.BaseUrl + SUBPAGE_NAME);
+
+            var radioButton = driver.FindElement(By.Name(ELEMENT_NAME));
             radioButton.Click();
-            Thread.Sleep(3000); 
+            Thread.Sleep(3000);
 
             var isChecked = radioButton.GetAttribute("checked") == "true";
 
             Thread.Sleep(3000);
-            Selector.Quit();
+
+            driver.Quit();
         }
     }
 }
