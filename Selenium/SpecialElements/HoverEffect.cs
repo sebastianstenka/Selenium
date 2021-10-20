@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Selenium.SpecialElements
 {
@@ -32,6 +34,26 @@ namespace Selenium.SpecialElements
 
             var actions = new Actions(driver);
             actions.MoveToElement(elements[0]).Build().Perform();
+            Thread.Sleep(2000);
+
+            MoveElement(new Actions(driver), elements[0], elements[1], 0, 10);
+            Thread.Sleep(1000);
+
+            MoveElement(new Actions(driver), elements[0], elements[2], 0, 10);
+            Thread.Sleep(1000);
+
+            MoveElement(new Actions(driver), elements[4], elements[1], 0, 10);
+            Thread.Sleep(1000);
+        }
+
+        private void MoveElement(Actions actions, IWebElement from, IWebElement to, int x, int y)
+        {
+            actions.ClickAndHold(from)
+                .MoveToElement(to)
+                .MoveByOffset(x, y)
+                .Release()
+                .Build()
+                .Perform();
         }
     }
 }
