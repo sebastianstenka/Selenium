@@ -64,6 +64,7 @@
     <Compile Include="NavigateTo.cs" />
     <Compile Include="Scenarios\LoginInvalidPassword.cs" />
     <Compile Include="Scenarios\LoginInvalidUsername.cs" />
+    <Compile Include="SpecialElements\BrowserPositionAndSize.cs" />
     <Compile Include="SpecialElements\HoverEffect.cs" />
     <Compile Include="SpecialElements\JavaScriptExecutor.cs" />
     <Compile Include="SpecialElements\Screenshot.cs" />

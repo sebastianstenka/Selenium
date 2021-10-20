@@ -8,8 +8,7 @@ namespace Selenium
     {
         private static void Main()
         {
-            var hoverEffect = new HoverEffect();
-            hoverEffect.Run();
+            var browser = new BrowserPositionAndSize();
         }
     }
 }
