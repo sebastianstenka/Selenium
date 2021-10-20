@@ -5,7 +5,7 @@ using System;
 
 namespace Selenium
 {
-    public class Actions
+    public class OwnActions
     {
         public static ChromeDriver InitDriver()
         {

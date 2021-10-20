@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Selenium.SpecialElements;
 using System.Threading;
 
 namespace Selenium
@@ -7,6 +8,8 @@ namespace Selenium
     {
         private static void Main()
         {
+            var javaScriptExecutor = new JavaScriptExecutor();
+            javaScriptExecutor.Run();
 
         }
     }

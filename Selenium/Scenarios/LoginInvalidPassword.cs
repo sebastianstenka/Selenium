@@ -11,7 +11,7 @@ namespace Selenium.Scenarios
         [OneTimeSetUp]
         public void SetUp()
         {
-            _driver = Actions.InitDriver();
+            _driver = OwnActions.InitDriver();
             NavigateTo.LoginFormThroughtTheMenu(_driver);
         }
 
@@ -24,7 +24,7 @@ namespace Selenium.Scenarios
         [Test]
         public void LessThan5Characters()
         {
-            Actions.FillLoginForm(_driver, Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.FourCharacter, Config.Credentials.Invalid.Password.FourCharacter);
+            OwnActions.FillLoginForm(_driver, Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.FourCharacter, Config.Credentials.Invalid.Password.FourCharacter);
 
             var alert = _driver.SwitchTo().Alert();
 
@@ -36,7 +36,7 @@ namespace Selenium.Scenarios
         [Test]
         public void MoreThan12Chars()
         {
-            Actions.FillLoginForm(_driver, Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.ThirteenCharacter, Config.Credentials.Invalid.Password.ThirteenCharacter);
+            OwnActions.FillLoginForm(_driver, Config.Credentials.Valid.Username, Config.Credentials.Invalid.Password.ThirteenCharacter, Config.Credentials.Invalid.Password.ThirteenCharacter);
 
             var alert = _driver.SwitchTo().Alert();
 
