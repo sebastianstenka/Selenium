@@ -8,9 +8,8 @@ namespace Selenium
     {
         private static void Main()
         {
-            var javaScriptExecutor = new JavaScriptExecutor();
-            javaScriptExecutor.Run();
-
+            var hoverEffect = new HoverEffect();
+            hoverEffect.Run();
         }
     }
 }
