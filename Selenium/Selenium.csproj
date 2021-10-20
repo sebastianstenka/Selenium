@@ -68,6 +68,7 @@
     <Compile Include="SpecialElements\HoverEffect.cs" />
     <Compile Include="SpecialElements\JavaScriptExecutor.cs" />
     <Compile Include="SpecialElements\Screenshot.cs" />
+    <Compile Include="SpecialElements\Tab.cs" />
     <Compile Include="UiElements\HomePage.cs" />
     <Compile Include="UiElements\Menu.cs" />
     <Compile Include="UiElements\RightSideBar.cs" />

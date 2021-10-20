@@ -8,7 +8,7 @@ namespace Selenium
     {
         private static void Main()
         {
-            var browser = new BrowserPositionAndSize();
+            var tab = new Tab();
         }
     }
 }
